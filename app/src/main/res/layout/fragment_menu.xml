@@ -7,45 +7,54 @@
     android:layout_height="match_parent"
     tools:context=".MenuFragment">
 
-    <Button
-        android:id="@+id/LoginButton"
-        android:layout_width="118dp"
-        android:layout_height="75dp"
-        android:layout_marginEnd="76dp"
-        android:text="Login"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/teste"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PlayButton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/LoginButton"
+        android:layout_width="105dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="96dp"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LogoutButton"
+        app:layout_constraintTop_toBottomOf="@+id/PlayButton" />
 
     <Button
         android:id="@+id/PlayButton"
-        android:layout_width="218dp"
-        android:layout_height="85dp"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
         android:layout_marginStart="96dp"
-        android:layout_marginEnd="97dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="96dp"
         android:text="Play"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AppName" />
 
     <Button
         android:id="@+id/RegisterButton"
-        android:layout_width="118dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="23dp"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
         android:text="Register"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginButton"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 
     <TextView
         android:id="@+id/AppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="44dp"
         android:text="Game"
         android:textSize="96sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,13 +63,11 @@
 
     <Button
         android:id="@+id/LogoutButton"
-        android:layout_width="97dp"
-        android:layout_height="66dp"
+        android:layout_width="105dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="96dp"
         android:text="Logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/LoginButton"
-        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PlayButton"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintTop_toBottomOf="@+id/PlayButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
