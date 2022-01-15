@@ -19,10 +19,6 @@ import android.R
 
 import android.widget.EditText
 
-
-
-
-
 class RegisterFragment : Fragment() {
 
     private var _binding: FragmentRegisterBinding? = null
