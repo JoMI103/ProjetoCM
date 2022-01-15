@@ -6,4 +6,10 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="default_notification_channel_id">fcm_default_channel</string>
+    <string name="play">Play</string>
+    <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="flappy">Flappy</string>
+    <string name="pigeon">Pigeon</string>
 </resources>

@@ -22,6 +22,8 @@ class Player {
 
     companion object{
         const val GRAVITY = 10
+        const val MAX_SPEED = 20
+        const val MIN_SPEED = 1
     }
 
     constructor(context: Context, screenWidth: Int, screenHeight : Int){
@@ -29,14 +31,21 @@ class Player {
         y = 50f
         speed = 1
         bitmap = BitmapFactory
-            .decodeResource(context.resources, R.drawable.player)
+            .decodeResource(context.resources,R.drawable.playerf)
 
         minY = 0F
-        maxY = (screenHeight - bitmap.height).toFloat()
+        maxY = (screenHeight - bitmap.width).toFloat()
         detectColosion = Rect(x.toInt(),y.toInt(),bitmap.width, bitmap.height)
     }
 
     fun update(){
+        if (boosting){
+            speed += 2
+        }else{
+            speed -= 5
+        }
+        if (speed > MAX_SPEED) speed = MAX_SPEED
+        if (speed < MIN_SPEED) speed = MIN_SPEED
 
         y -= speed - GRAVITY
 

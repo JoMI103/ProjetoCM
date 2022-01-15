@@ -30,7 +30,7 @@
 
         <activity
             android:name=".GameSystem.GameActivity"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:exported="false" />
 
         <activity

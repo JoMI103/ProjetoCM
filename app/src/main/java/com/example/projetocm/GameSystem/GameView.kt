@@ -1,13 +1,12 @@
 package com.example.projetocm.GameSystem
 
 import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
+import android.graphics.*
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import com.example.projetocm.R
 
 class GameView: SurfaceView,Runnable {
 
@@ -17,7 +16,7 @@ class GameView: SurfaceView,Runnable {
     lateinit var surfaceHolder: SurfaceHolder
     var canvas : Canvas? =  null
     lateinit var paint : Paint
-
+    var backgroundbitmap : Bitmap
     lateinit var player : Player
 
 
@@ -27,8 +26,12 @@ class GameView: SurfaceView,Runnable {
         init(context,
             screenWidth,
             screenHeight)
+
+        backgroundbitmap = BitmapFactory
+            .decodeResource(context?.resources,R.drawable.background2)
     }
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs){
+
+    /*constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs){
         init(context)
     }
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(
@@ -38,6 +41,8 @@ class GameView: SurfaceView,Runnable {
     ){
         init(context)
     }
+
+     */
 
     fun init(context: Context?,
              screenWidth : Int = 0,
@@ -76,9 +81,8 @@ class GameView: SurfaceView,Runnable {
     fun draw(){
         if (surfaceHolder.surface.isValid){
             canvas = surfaceHolder.lockCanvas()
-            canvas?.drawColor(Color.BLACK)
+            canvas?.drawBitmap(backgroundbitmap,backgroundbitmap.width.toFloat(),backgroundbitmap.height.toFloat(),paint)
 
-            paint.color = Color.YELLOW
 
             canvas?.drawBitmap(player.bitmap, player.x, player.y, paint)
             //paint.style = Paint.Style.STROKE
