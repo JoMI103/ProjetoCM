@@ -40,6 +40,11 @@ class MenuFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        binding.PlayButton.setOnClickListener{
+            findNavController().navigate(R.id.action_menuFragment_to_playerFragment)
+        }
+
         binding.LoginButton.setOnClickListener {
             findNavController().navigate(R.id.action_menuFragment_to_loginFragment)
         }
