@@ -3,6 +3,7 @@ package com.example.projetocm
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.projetocm.databinding.ActivityMainBinding
 import com.example.projetocm.databinding.NavHostBinding
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth

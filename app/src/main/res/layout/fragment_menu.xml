@@ -8,6 +8,28 @@
     tools:context=".MenuFragment">
 
     <Button
+        android:id="@+id/PlayButton"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="96dp"
+        android:text="Play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AppName" />
+
+    <Button
+        android:id="@+id/LogoutButton"
+        android:layout_width="105dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="92dp"
+        android:text="Logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayButton" />
+
+    <Button
         android:id="@+id/LoginButton"
         android:layout_width="105dp"
         android:layout_height="70dp"
@@ -15,21 +37,9 @@
         android:layout_marginEnd="96dp"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toEndOf="@+id/LogoutButton"
         app:layout_constraintTop_toBottomOf="@+id/PlayButton" />
-
-    <Button
-        android:id="@+id/PlayButton"
-        android:layout_width="220dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="192dp"
-        android:layout_marginEnd="96dp"
-        android:text="Play"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AppName" />
 
     <Button
         android:id="@+id/RegisterButton"
@@ -37,6 +47,7 @@
         android:layout_height="70dp"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 
@@ -44,20 +55,13 @@
         android:id="@+id/AppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="Game"
-        android:textSize="96sp"
+        android:layout_marginTop="216dp"
+        android:text="Flying Pigeon"
+        android:textColor="#000000"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.774"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/LogoutButton"
-        android:layout_width="105dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="96dp"
-        android:text="Logout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PlayButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
