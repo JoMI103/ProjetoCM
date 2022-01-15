@@ -1,9 +1,10 @@
-package com.example.projetocm
+package com.example.projetocm.GameSystem
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Rect
+import com.example.projetocm.R
 
 class Player {
 
@@ -28,7 +29,7 @@ class Player {
         y = 50f
         speed = 1
         bitmap = BitmapFactory
-            .decodeResource(context.resources,R.drawable.player)
+            .decodeResource(context.resources, R.drawable.player)
 
         minY = 0F
         maxY = (screenHeight - bitmap.height).toFloat()

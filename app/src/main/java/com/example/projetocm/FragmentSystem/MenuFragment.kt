@@ -1,12 +1,15 @@
-package com.example.projetocm
+package com.example.projetocm.FragmentSystem
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.projetocm.GameSystem.GameActivity
+import com.example.projetocm.R
 import com.example.projetocm.databinding.FragmentMenuBinding
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
@@ -42,7 +45,9 @@ class MenuFragment : Fragment(){
 
 
         binding.PlayButton.setOnClickListener{
-            findNavController().navigate(R.id.action_menuFragment_to_playerFragment)
+            val intent = Intent(activity, GameActivity::class.java)
+            startActivity(intent)
+            //findNavController().navigate(R.id.action_menuFragment_to_playerFragment)
         }
 
         binding.LoginButton.setOnClickListener {

@@ -1,4 +1,4 @@
-package com.example.projetocm
+package com.example.projetocm.FragmentSystem
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,10 +14,6 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
 import android.text.TextUtils
-
-import android.R
-
-import android.widget.EditText
 
 class RegisterFragment : Fragment() {
 

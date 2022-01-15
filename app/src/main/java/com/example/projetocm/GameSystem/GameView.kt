@@ -1,10 +1,9 @@
-package com.example.projetocm
+package com.example.projetocm.GameSystem
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import android.media.MediaPlayer
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.SurfaceHolder
@@ -72,7 +71,7 @@ class GameView: SurfaceView,Runnable {
 
         player.update()
 
-        }
+    }
 
     fun draw(){
         if (surfaceHolder.surface.isValid){

@@ -1,4 +1,4 @@
-package com.example.projetocm
+package com.example.projetocm.GameSystem
 
 import android.graphics.Point
 import android.os.Bundle
