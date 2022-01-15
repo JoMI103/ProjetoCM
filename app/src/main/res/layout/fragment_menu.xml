@@ -9,22 +9,24 @@
 
     <Button
         android:id="@+id/PlayButton"
-        android:layout_width="220dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="96dp"
+        android:layout_width="224dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="90dp"
+        android:fontFamily="@font/concert_one"
         android:text="Play"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AppName" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/LogoutButton"
         android:layout_width="105dp"
         android:layout_height="70dp"
-        android:layout_marginStart="92dp"
+        android:layout_marginStart="90dp"
+        android:fontFamily="@font/concert_one"
         android:text="Logout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PlayButton" />
@@ -33,8 +35,8 @@
         android:id="@+id/LoginButton"
         android:layout_width="105dp"
         android:layout_height="70dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="90dp"
+        android:fontFamily="@font/concert_one"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
@@ -43,25 +45,43 @@
 
     <Button
         android:id="@+id/RegisterButton"
-        android:layout_width="220dp"
+        android:layout_width="223dp"
         android:layout_height="70dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="90dp"
+        android:fontFamily="@font/concert_one"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 
     <TextView
         android:id="@+id/AppName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="216dp"
-        android:text="Flying Pigeon"
+        android:layout_width="330dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="Flappy"
         android:textColor="#000000"
-        android:textSize="48sp"
+        android:textSize="75sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="325dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="Pigeon"
+        android:textColor="#000000"
+        android:textSize="75sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AppName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

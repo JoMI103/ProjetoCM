@@ -73,6 +73,7 @@ class MenuFragment : Fragment(){
         }
 
 
+
         if(Firebase.auth.currentUser != null){
             binding.LoginButton.isEnabled = false
             binding.RegisterButton.isEnabled = false
