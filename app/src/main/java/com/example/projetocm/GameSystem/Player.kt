@@ -27,14 +27,14 @@ class Player {
     }
 
     constructor(context: Context, screenWidth: Int, screenHeight : Int){
+        // posicao do player no ecra
         x = 75f
         y = 50f
         speed = 1
-        bitmap = BitmapFactory
-            .decodeResource(context.resources,R.drawable.playerf)
-
+        bitmap = BitmapFactory.decodeResource(context.resources,R.drawable.playerf)
+        // posicoes de maximo e minimo no ecra
         minY = 0F
-        maxY = (screenHeight - bitmap.width).toFloat()
+        maxY = (screenHeight - bitmap.height * 2).toFloat()
         detectColosion = Rect(x.toInt(),y.toInt(),bitmap.width, bitmap.height)
     }
 

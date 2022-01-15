@@ -81,7 +81,8 @@ class GameView: SurfaceView,Runnable {
     fun draw(){
         if (surfaceHolder.surface.isValid){
             canvas = surfaceHolder.lockCanvas()
-            canvas?.drawBitmap(backgroundbitmap,backgroundbitmap.width.toFloat(),backgroundbitmap.height.toFloat(),paint)
+            canvas?.drawColor(Color.BLACK)
+            //canvas?.drawBitmap(backgroundbitmap,backgroundbitmap.width.toFloat(),backgroundbitmap.height.toFloat(),paint)
 
 
             canvas?.drawBitmap(player.bitmap, player.x, player.y, paint)
