@@ -20,11 +20,11 @@ class PlayerFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val display = windowManager.defaultDisplay
+        //val display = windowManager.defaultDisplay
         var size = Point()
-        display.getSize(size)
-        gameView = GameView(this, size.x, size.y)
-        setContentView(gameView)
+        //display.getSize(size)
+        //gameView = GameView(this, size.x, size.y)
+        //setContentView(gameView)
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
