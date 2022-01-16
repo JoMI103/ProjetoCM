@@ -22,11 +22,15 @@ class GameView: SurfaceView,Runnable {
     var canvas : Canvas? =  null
     lateinit var paint : Paint
     lateinit var player : Player
+    lateinit var breadPitt : Bread
     var chimneys = arrayListOf<Chimneys>()
 
     lateinit var icon : Bitmap
 
     var dead: Boolean = false
+    var score: Int = 0
+
+    var drawBreadPitt : Boolean = true
 
 
     constructor(context: Context?,
@@ -71,6 +75,8 @@ class GameView: SurfaceView,Runnable {
         for(index in 0..1){
             chimneys.add(Chimneys(context, screenWidth,screenHeight))
         }
+
+        breadPitt = Bread(context!!, screenWidth, screenHeight)
 
     }
 
@@ -119,6 +125,8 @@ class GameView: SurfaceView,Runnable {
 
                 i++
             }
+            drawBreadPitt = true
+            breadPitt.update(true,yy)
         }
         else
         {
@@ -128,6 +136,12 @@ class GameView: SurfaceView,Runnable {
                 if (c.detectColosion.intersect(player.detectColosion)){
                     dead = true
                 }
+            }
+
+            breadPitt.update(false,0)
+            if(breadPitt.detectColosion.intersect(player.detectColosion)){
+                score++
+                drawBreadPitt = false;
             }
         }
 
@@ -157,6 +171,8 @@ class GameView: SurfaceView,Runnable {
                 //paint.style = Paint.Style.STROKE
                 //canvas?.drawRect(e.detectColosion,paint)
             }
+
+            if(drawBreadPitt) canvas?.drawBitmap(breadPitt.bitmap, breadPitt.x, breadPitt.y, paint)
 
             //paint.style = Paint.Style.STROKE
             //canvas?.drawRect(player.detectColosion,paint)
