@@ -37,7 +37,7 @@ class Chimneys {
         detectColosion = Rect(x.toInt(),y.toInt(),bitmap.width, bitmap.height)
     }
 
-    fun update(playerSpeed:Int){
+    fun update(bool: Boolean,yCord: Int,id: Int){
 
         x -= speed
 
@@ -46,12 +46,15 @@ class Chimneys {
         detectColosion.right = x.toInt() + bitmap.width
         detectColosion.bottom = y.toInt() + bitmap.height
 
-        if (x<minX - bitmap.width){
-            var generator = Random()
-            speed =  20
-            y = generator.nextInt(maxY.toInt()).toFloat() - bitmap.height
+
+        if(bool){
+            if(id == 0)
+                y = yCord + 100f
+            else
+                y = yCord - 100f
+
             x = maxX
         }
     }
-
 }
+

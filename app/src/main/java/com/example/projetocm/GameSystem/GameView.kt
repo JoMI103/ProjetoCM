@@ -9,8 +9,11 @@ import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import com.example.projetocm.R
+import java.util.*
 
 class GameView: SurfaceView,Runnable {
+
+    var chimneysX : Float = 0.0f
 
     var playing = false
     lateinit var gameThread : Thread
@@ -22,6 +25,8 @@ class GameView: SurfaceView,Runnable {
     var chimneys = arrayListOf<Chimneys>()
 
     lateinit var icon : Bitmap
+
+
 
 
     constructor(context: Context?,
@@ -103,11 +108,29 @@ class GameView: SurfaceView,Runnable {
             getContext().startActivity(intent)
 
         }
-        for( c in chimneys){
-            c.update(player.forca)
+
+        if(chimneysX<chimneys[0].minX - chimneys[0].bitmap.width)
+        {
+            var i = 0
+            var generator = Random()
+            var yy = generator.nextInt(100)
+            for( c in chimneys) {
+                c.update(true,yy,i)
+                i++
+            }
+        }
+        else
+        {
+            for( c in chimneys) {
+                c.update(false,0,0)
+            }
         }
 
+        chimneysX = chimneys[0].x
+
     }
+
+
 
     fun draw(){
 
