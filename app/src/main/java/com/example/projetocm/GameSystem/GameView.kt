@@ -32,7 +32,7 @@ class GameView: SurfaceView,Runnable {
         if (context != null) {
             icon = BitmapFactory.decodeResource(
                 context.resources,
-                R.drawable.fundo1
+                R.drawable.fundo2
             )
         }
     }
