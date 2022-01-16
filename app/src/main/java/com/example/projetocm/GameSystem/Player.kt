@@ -11,7 +11,8 @@ class Player {
     var bitmap : Bitmap
     var x : Float
     var y : Float
-    var speed : Int = 0
+
+    var forca : Int = 0
 
     var boosting = false
 
@@ -21,17 +22,17 @@ class Player {
     var detectColosion = Rect()
 
     companion object{
-        const val GRAVITY = 10
-        const val MAX_SPEED = 20
-        const val MIN_SPEED = 1
+        const val GRAVITY = 10 * 2
     }
 
     constructor(context: Context, screenWidth: Int, screenHeight : Int){
         // posicao do player no ecra
         x = 75f
         y = 50f
-        speed = 1
+
+        //desenha o player
         bitmap = BitmapFactory.decodeResource(context.resources,R.drawable.playerf)
+
         // posicoes de maximo e minimo no ecra
         minY = 0F
         maxY = (screenHeight - bitmap.height * 2).toFloat()
@@ -39,15 +40,14 @@ class Player {
     }
 
     fun update(){
-        if (boosting){
-            speed += 2
-        }else{
-            speed -= 5
-        }
-        if (speed > MAX_SPEED) speed = MAX_SPEED
-        if (speed < MIN_SPEED) speed = MIN_SPEED
 
-        y -= speed - GRAVITY
+        if(forca>0){
+        forca /= 2
+        }
+        else
+            forca=0
+
+        y -= forca - GRAVITY
 
         if (y < minY) y = minY
         if (y > maxY) y = maxY

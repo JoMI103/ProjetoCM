@@ -16,7 +16,6 @@ class GameView: SurfaceView,Runnable {
     lateinit var surfaceHolder: SurfaceHolder
     var canvas : Canvas? =  null
     lateinit var paint : Paint
-    var backgroundbitmap : Bitmap
     lateinit var player : Player
 
 
@@ -27,8 +26,7 @@ class GameView: SurfaceView,Runnable {
             screenWidth,
             screenHeight)
 
-        backgroundbitmap = BitmapFactory
-            .decodeResource(context?.resources,R.drawable.background2)
+
     }
 
     /*constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs){
@@ -82,8 +80,6 @@ class GameView: SurfaceView,Runnable {
         if (surfaceHolder.surface.isValid){
             canvas = surfaceHolder.lockCanvas()
             canvas?.drawColor(Color.BLACK)
-            //canvas?.drawBitmap(backgroundbitmap,backgroundbitmap.width.toFloat(),backgroundbitmap.height.toFloat(),paint)
-
 
             canvas?.drawBitmap(player.bitmap, player.x, player.y, paint)
             //paint.style = Paint.Style.STROKE
@@ -100,16 +96,15 @@ class GameView: SurfaceView,Runnable {
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         event?.let{
             when (it.action.and(MotionEvent.ACTION_MASK)){
-                MotionEvent.ACTION_UP ->{
+                /*MotionEvent.ACTION_UP ->{
                     player.boosting = false
                 }
+                 */
                 MotionEvent.ACTION_DOWN ->{
-                    player.boosting = true
+                    player.forca = 300
                 }
             }
         }
-
-
         return true
     }
 }
