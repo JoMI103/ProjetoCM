@@ -113,7 +113,7 @@ class GameView: SurfaceView,Runnable {
         {
             var i = 0
             var generator = Random()
-            var yy = generator.nextInt(100) + (chimneys[0].maxY / 2).toInt()
+            var yy = 600 - generator.nextInt(1200) + (chimneys[0].maxY / 2).toInt()
             for( c in chimneys) {
                 c.update(true,yy,i)
                 i++
