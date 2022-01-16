@@ -49,9 +49,9 @@ class Chimneys {
 
         if(bool){
             if(id == 0)
-                y = yCord + 100f
+                y = yCord + 200f
             else
-                y = yCord - 100f - bitmap.height
+                y = yCord - 200f - bitmap.height
 
             x = maxX
         }
