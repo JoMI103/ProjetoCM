@@ -8,8 +8,11 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ListView
 import android.widget.TextView
+import com.example.projetocm.GameSystem.Scores
 import com.example.projetocm.R
 import com.example.projetocm.databinding.FragmentHighscoreBinding
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import kotlin.collections.ArrayList
 
 class  HighscoreFragment : Fragment() {
@@ -18,7 +21,7 @@ class  HighscoreFragment : Fragment() {
     private val binding get() = _binding!!
     private val scores = ArrayList<Int>()
     lateinit var listviewScores: ListView
-
+    private val Scores = ArrayList<Int>()
     lateinit var listviewPositions: ListView
 
   override fun onCreateView(
@@ -26,8 +29,8 @@ class  HighscoreFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-      scores.add(29)
-      scores.add(39)
+      scores.add(10)
+      scores.add(20)
 
         _binding = FragmentHighscoreBinding.inflate(inflater, container, false)
         val root: View = binding.root

@@ -30,7 +30,7 @@ class Chimneys {
         bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.chimney)
 
         var generator = Random()
-        speed = generator.nextInt(6) + 10
+        speed = 20
         y = generator.nextInt(maxY.toInt()).toFloat() - bitmap.height
         x = maxX
 
@@ -38,7 +38,7 @@ class Chimneys {
     }
 
     fun update(playerSpeed:Int){
-        x -= playerSpeed
+
         x -= speed
 
         detectColosion.left = x.toInt()
@@ -48,7 +48,7 @@ class Chimneys {
 
         if (x<minX - bitmap.width){
             var generator = Random()
-            speed = generator.nextInt(6) + 10
+            speed =  20
             y = generator.nextInt(maxY.toInt()).toFloat() - bitmap.height
             x = maxX
         }

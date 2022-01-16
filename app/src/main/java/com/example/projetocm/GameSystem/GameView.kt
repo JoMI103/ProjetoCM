@@ -63,7 +63,7 @@ class GameView: SurfaceView,Runnable {
         player = Player(context!!, screenWidth, screenHeight)
         paint = Paint()
 
-        for(index in 0..2){
+        for(index in 0..1){
             chimneys.add(Chimneys(context, screenWidth,screenHeight))
         }
 
@@ -137,15 +137,12 @@ class GameView: SurfaceView,Runnable {
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         event?.let{
             when (it.action.and(MotionEvent.ACTION_MASK)){
-                /*MotionEvent.ACTION_UP ->{
-                    player.boosting = false
-                }
-                 */
+
                 MotionEvent.ACTION_DOWN ->{
                     if(player.cooldown == 0){
                     player.forca = 80
                     player.cooldown = 4
-                }
+                    }
                 }
             }
         }
