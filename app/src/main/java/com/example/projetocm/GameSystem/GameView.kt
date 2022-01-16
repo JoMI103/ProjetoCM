@@ -124,7 +124,7 @@ class GameView: SurfaceView,Runnable {
                  */
                 MotionEvent.ACTION_DOWN ->{
                     if(player.cooldown == 0){
-                    player.forca = 90
+                    player.forca = 100
                     player.cooldown = 4
                 }
                 }
