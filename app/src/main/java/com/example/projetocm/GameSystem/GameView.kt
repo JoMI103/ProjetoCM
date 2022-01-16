@@ -108,7 +108,7 @@ class GameView: SurfaceView,Runnable {
         if(player.y > player.maxY - 1)
         {
             val intent = Intent().setClass(getContext(), RestartGame::class.java)
-            intent.putExtra("score",10)
+            intent.putExtra("score",score)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
             getContext().startActivity(intent)
@@ -138,17 +138,20 @@ class GameView: SurfaceView,Runnable {
                 }
             }
 
-            breadPitt.update(false,0)
-            if(breadPitt.detectColosion.intersect(player.detectColosion)){
-                score++
-                drawBreadPitt = false;
+            if(drawBreadPitt){
+                breadPitt.update(false,0)
+                if( breadPitt.detectColosion.intersect(player.detectColosion)){
+                    score++
+                    drawBreadPitt = false;
+                }
             }
+
         }
 
         if(dead){
             for( c in chimneys) {
                 c.speed = 0
-
+                breadPitt.speed= 0
             }
         }
 

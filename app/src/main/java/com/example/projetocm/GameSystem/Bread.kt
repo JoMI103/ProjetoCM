@@ -26,7 +26,7 @@ class Bread {
         maxY = screenHeight.toFloat()
         minY = 0F
 
-        bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.pao)
+        bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.bread)
 
         var generator = Random()
         speed = 30
@@ -47,8 +47,8 @@ class Bread {
 
 
         if(bool){
-            y = yCord.toFloat()
-            x = maxX
+            y = yCord.toFloat() -bitmap.height /2
+            x = maxX -20
         }
     }
 
