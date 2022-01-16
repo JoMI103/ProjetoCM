@@ -29,21 +29,14 @@ class  HighscoreFragment : Fragment() {
     private var _binding: FragmentHighscoreBinding? = null
     private val binding get() = _binding!!
     private val names = ArrayList<Int>()
-    lateinit var listviewPost: ListView
+    lateinit var listviewScores: ListView
 
   override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-      names.add(123)
-      names.add(144)
 
-      listviewPost = binding.listviewScores
-      val adapter = PostsAdapter()
-      listviewPost.adapter = adapter
-
-          adapter.notifyDataSetChanged()
 
         _binding = FragmentHighscoreBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -78,6 +71,13 @@ class  HighscoreFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        names.add(123)
+        names.add(144)
+
+        listviewScores = binding.listviewScores
+        val adapter = PostsAdapter()
+        listviewScores.adapter = adapter
+
 
     }
 }
