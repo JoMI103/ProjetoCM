@@ -49,10 +49,10 @@ class RestartGame : AppCompatActivity() {
             "Score" to 10,
             "Time" to Timestamp(Date()),
         )
-        if(true){
+        if(FirebaseAuth.getInstance().uid != null ){
 
             db.collection("Scores")
-                .document("FirebaseAuth.getInstance().uid.toString()")
+                .document(FirebaseAuth.getInstance().uid.toString())
                 .set(score)
         }
         else
