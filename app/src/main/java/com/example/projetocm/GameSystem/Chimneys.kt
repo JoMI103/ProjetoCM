@@ -31,7 +31,7 @@ class Chimneys {
 
         var generator = Random()
         speed = 20
-        y = generator.nextInt(maxY.toInt()).toFloat() - bitmap.height
+        y =  generator.nextInt(100) + (maxY / 2)
         x = maxX
 
         detectColosion = Rect(x.toInt(),y.toInt(),bitmap.width, bitmap.height)
@@ -51,7 +51,7 @@ class Chimneys {
             if(id == 0)
                 y = yCord + 100f
             else
-                y = yCord - 100f
+                y = yCord - 100f - bitmap.height
 
             x = maxX
         }
