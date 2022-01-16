@@ -41,7 +41,7 @@ class GameView: SurfaceView,Runnable {
         attrs,
         defStyleAttr
     ){
-        init(context)
+        init(context).
     }
 
      */
