@@ -3,6 +3,7 @@ package com.example.projetocm.GameSystem
 import android.content.Context
 import android.content.Intent
 import android.graphics.*
+import android.media.MediaPlayer
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.SurfaceHolder
@@ -18,6 +19,7 @@ class GameView: SurfaceView,Runnable {
     var canvas : Canvas? =  null
     lateinit var paint : Paint
     lateinit var player : Player
+    var chimneys = arrayListOf<Chimneys>()
 
     lateinit var icon : Bitmap
 
@@ -37,6 +39,8 @@ class GameView: SurfaceView,Runnable {
                 R.drawable.fundo2
             )
         }
+
+
     }
 
     /*constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs){
@@ -58,6 +62,11 @@ class GameView: SurfaceView,Runnable {
         surfaceHolder = holder
         player = Player(context!!, screenWidth, screenHeight)
         paint = Paint()
+
+        for(index in 0..2){
+            chimneys.add(Chimneys(context, screenWidth,screenHeight))
+        }
+
     }
 
 
@@ -84,6 +93,7 @@ class GameView: SurfaceView,Runnable {
 
         player.update()
 
+
         if(player.y > player.maxY - 1)
         {
             val intent = Intent().setClass(getContext(), RestartGame::class.java)
@@ -92,6 +102,9 @@ class GameView: SurfaceView,Runnable {
 
             getContext().startActivity(intent)
 
+        }
+        for( c in chimneys){
+            c.update(player.forca)
         }
 
     }
@@ -103,6 +116,12 @@ class GameView: SurfaceView,Runnable {
             //canvas?.drawColor(Color.BLACK)
             canvas?.drawBitmap(icon,0F,0F,paint)
             canvas?.drawBitmap(player.bitmap, player.x, player.y, paint)
+            for( c in chimneys){
+                canvas?.drawBitmap(c.bitmap, c.x, c.y, paint)
+                //paint.color = Color.GREEN
+                //paint.style = Paint.Style.STROKE
+                //canvas?.drawRect(e.detectColosion,paint)
+            }
 
             //paint.style = Paint.Style.STROKE
             //canvas?.drawRect(player.detectColosion,paint)
