@@ -33,7 +33,7 @@ class Player {
         //desenha o player
         bitmap = BitmapFactory.decodeResource(context.resources,R.drawable.playerf)
 
-        // posicoes de maximo e minimo no ecra
+        // posicoes de maximo e minimo no ecra.
         minY = 0F
         maxY = (screenHeight - bitmap.height * 2).toFloat()
         detectColosion = Rect(x.toInt(),y.toInt(),bitmap.width, bitmap.height)
