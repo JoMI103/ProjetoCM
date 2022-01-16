@@ -33,10 +33,16 @@ class RestartGame : AppCompatActivity() {
 
         binding.tvScore.text = "Score: " + intent.getStringExtra("score")
 
-        //bioinding.tvScore.text = "Score: " + intent.getStringExtra("score")
 
-        //val textView = findViewById<TextView>(R.id.tvScore)
-       // textView.text = "Score: " + intent.getStringExtra("score")
+        binding.buttonBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.buttonTryAgain.setOnClickListener {
+            val intent = Intent(this, GameActivity::class.java)
+            startActivity(intent)
+        }
 
         val db = Firebase.firestore
         val score = hashMapOf(

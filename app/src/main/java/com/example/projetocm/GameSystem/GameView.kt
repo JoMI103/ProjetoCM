@@ -19,6 +19,8 @@ class GameView: SurfaceView,Runnable {
     lateinit var paint : Paint
     lateinit var player : Player
 
+    lateinit var icon : Bitmap
+
 
     constructor(context: Context?,
                 screenWidth : Int,
@@ -27,7 +29,12 @@ class GameView: SurfaceView,Runnable {
             screenWidth,
             screenHeight)
 
-
+        if (context != null) {
+            icon = BitmapFactory.decodeResource(
+                context.resources,
+                R.drawable.fundo1
+            )
+        }
     }
 
     /*constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs){
@@ -88,11 +95,6 @@ class GameView: SurfaceView,Runnable {
     }
 
     fun draw(){
-
-        val icon = BitmapFactory.decodeResource(
-            context.resources,
-            R.drawable.fundo1
-        )
 
         if (surfaceHolder.surface.isValid){
             canvas = surfaceHolder.lockCanvas()
