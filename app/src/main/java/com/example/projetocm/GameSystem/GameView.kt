@@ -29,6 +29,8 @@ class GameView: SurfaceView,Runnable {
             screenWidth,
             screenHeight)
 
+        //bitmap do Fundo
+
         if (context != null) {
             icon = BitmapFactory.decodeResource(
                 context.resources,
