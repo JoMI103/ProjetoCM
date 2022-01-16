@@ -97,7 +97,7 @@ class GameView: SurfaceView,Runnable {
         if(player.y > player.maxY - 1)
         {
             val intent = Intent().setClass(getContext(), RestartGame::class.java)
-            intent.putExtra("score","10")
+            intent.putExtra("score",10)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
             getContext().startActivity(intent)

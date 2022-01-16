@@ -31,7 +31,7 @@ class RestartGame : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.tvScore.text = "Score: " + intent.getStringExtra("score")
+        binding.tvScore.text = "Score: " + intent.getIntExtra("score",0)
 
 
         binding.buttonBack.setOnClickListener {
@@ -43,14 +43,24 @@ class RestartGame : AppCompatActivity() {
             val intent = Intent(this, GameActivity::class.java)
             startActivity(intent)
         }
-
         val db = Firebase.firestore
-        val score = hashMapOf(
-            "Score" to 10,
-            "Time" to Timestamp(Date()),
-        )
 
-        db.collection("Scores").document(FirebaseAuth.getInstance().uid.toString()).set(score)
+
+        binding.buttonHSSave.setOnClickListener {
+            val score = hashMapOf(
+                "Name" to binding.ETName.text.toString(),
+                "Score" to intent.getIntExtra("score",0),
+            )
+
+            db.collection("Scores").add(score)
+
+            //binding.buttonHSSave.isEnabled = false
+        }
+
+
+
+
+
 
 
 
