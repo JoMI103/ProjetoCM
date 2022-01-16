@@ -30,7 +30,7 @@ class Chimneys {
         bitmap = BitmapFactory.decodeResource(context.resources, R.drawable.chimney)
 
         var generator = Random()
-        speed = 20
+        speed = 30
         y =  generator.nextInt(100) + (maxY / 2)
         x = -20f
 

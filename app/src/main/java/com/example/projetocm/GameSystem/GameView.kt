@@ -26,7 +26,7 @@ class GameView: SurfaceView,Runnable {
 
     lateinit var icon : Bitmap
 
-
+    var dead: Boolean = false
 
 
     constructor(context: Context?,
@@ -116,6 +116,7 @@ class GameView: SurfaceView,Runnable {
             var yy = 600 - generator.nextInt(1200) + (chimneys[0].maxY / 2).toInt()
             for( c in chimneys) {
                 c.update(true,yy,i)
+
                 i++
             }
         }
@@ -123,6 +124,17 @@ class GameView: SurfaceView,Runnable {
         {
             for( c in chimneys) {
                 c.update(false,0,0)
+
+                if (c.detectColosion.intersect(player.detectColosion)){
+                    dead = true
+                }
+            }
+        }
+
+        if(dead){
+            for( c in chimneys) {
+                c.speed = 0
+
             }
         }
 
@@ -158,13 +170,16 @@ class GameView: SurfaceView,Runnable {
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        event?.let{
-            when (it.action.and(MotionEvent.ACTION_MASK)){
+        event?.let {
+            if (!dead) {
+                when (it.action.and(MotionEvent.ACTION_MASK)) {
 
-                MotionEvent.ACTION_DOWN ->{
-                    if(player.cooldown == 0){
-                    player.forca = 80
-                    player.cooldown = 4
+
+                    MotionEvent.ACTION_DOWN -> {
+                        if (player.cooldown == 0) {
+                            player.forca = 80
+                            player.cooldown = 4
+                        }
                     }
                 }
             }
