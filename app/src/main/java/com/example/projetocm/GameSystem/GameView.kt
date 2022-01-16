@@ -1,18 +1,13 @@
 package com.example.projetocm.GameSystem
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import com.example.projetocm.R
-import android.graphics.BitmapFactory
-
-import android.graphics.Bitmap
-
-
-
 
 class GameView: SurfaceView,Runnable {
 
@@ -31,6 +26,8 @@ class GameView: SurfaceView,Runnable {
         init(context,
             screenWidth,
             screenHeight)
+
+
     }
 
     /*constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs){
@@ -77,6 +74,16 @@ class GameView: SurfaceView,Runnable {
     fun update(){
 
         player.update()
+
+        if(player.y > player.maxY - 1)
+        {
+            val intent = Intent().setClass(getContext(), RestartGame::class.java)
+            intent.putExtra("score","10")
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+            getContext().startActivity(intent)
+
+        }
 
     }
 

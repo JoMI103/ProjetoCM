@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ASP/ProjetoCM/app/src/main/res/layout/activity_game.xml" value="0.3359375" />
+        <entry key="..\:/ASP/ProjetoCM/app/src/main/res/layout/activity_restart.xml" value="0.3359375" />
         <entry key="..\:/ASP/ProjetoCM/app/src/main/res/layout/fragment_login.xml" value="0.3359375" />
         <entry key="..\:/ASP/ProjetoCM/app/src/main/res/layout/fragment_menu.xml" value="0.3359375" />
         <entry key="..\:/ASP/ProjetoCM/app/src/main/res/layout/fragment_player.xml" value="0.3359375" />

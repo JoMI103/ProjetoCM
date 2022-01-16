@@ -17,6 +17,7 @@ class GameActivity: AppCompatActivity() {
         setContentView(gameView)
     }
 
+
     override fun onResume() {
         super.onResume()
         gameView.resume()
