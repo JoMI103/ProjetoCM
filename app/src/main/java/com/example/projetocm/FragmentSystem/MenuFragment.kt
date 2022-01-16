@@ -76,6 +76,9 @@ class MenuFragment : Fragment(){
                 binding.LogoutButton.isEnabled = false
             }
         }
+        binding.HighscoreButton.setOnClickListener {
+            findNavController().navigate(R.id.action_menuFragment_to_highscoreFragment)
+        }
 
 
 
