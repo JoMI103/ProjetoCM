@@ -23,7 +23,7 @@ class Player {
     var detectColosion = Rect()
 
     companion object{
-        const val GRAVITY = 10 * 2
+        const val GRAVITY = 10 * 3
     }
 
     constructor(context: Context, screenWidth: Int, screenHeight : Int){
