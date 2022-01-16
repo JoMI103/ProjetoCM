@@ -3,23 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ASP/ProjetoCM/app/src/main/res/layout/activity_game.xml" value="0.3359375" />
+        <entry key="..\:/ASP/ProjetoCM/app/src/main/res/layout/activity_restart.xml" value="0.3359375" />
         <entry key="..\:/ASP/ProjetoCM/app/src/main/res/layout/fragment_login.xml" value="0.3359375" />
         <entry key="..\:/ASP/ProjetoCM/app/src/main/res/layout/fragment_menu.xml" value="0.3359375" />
         <entry key="..\:/ASP/ProjetoCM/app/src/main/res/layout/fragment_player.xml" value="0.3359375" />
         <entry key="..\:/ASP/ProjetoCM/app/src/main/res/layout/nav_host.xml" value="0.3359375" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/ProjetoCM1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.403125" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/ProjetoCM1/app/src/main/res/layout/activity_game.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/ProjetoCM1/app/src/main/res/layout/activity_restart.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/ProjetoCM1/app/src/main/res/layout/fragment_highscore.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/ProjetoCM1/app/src/main/res/layout/fragment_login.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/ProjetoCM1/app/src/main/res/layout/fragment_menu.xml" value="0.5" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/ProjetoCM1/app/src/main/res/layout/nav_host.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/Jorge/AndroidStudioProjects/ProjetoCM1/app/src/main/res/layout/row_score.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/jorge/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/jorge/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/fragment_login.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/jorge/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/fragment_menu.xml" value="0.44895833333333335" />
         <entry key="..\:/Users/jorge/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/nav_host.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/activity_game.xml" value="0.25" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/activity_restart.xml" value="0.25" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/fragment_highscore.xml" value="0.25" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/fragment_menu.xml" value="0.25" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/fragment_register.xml" value="0.25" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/nav_host.xml" value="0.25" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/ProjetoCM/app/src/main/res/layout/row_score.xml" value="0.25" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/ProjetoCM/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14322916666666666" />
       </map>
     </option>
   </component>
