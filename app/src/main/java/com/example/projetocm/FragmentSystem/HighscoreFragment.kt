@@ -18,7 +18,7 @@ class  HighscoreFragment : Fragment() {
     private val binding get() = _binding!!
     private val scores = ArrayList<Int>()
     lateinit var listviewScores: ListView
-    private val positions = ArrayList<Int>()
+
     lateinit var listviewPositions: ListView
 
   override fun onCreateView(
@@ -26,7 +26,8 @@ class  HighscoreFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-
+      scores.add(29)
+      scores.add(39)
 
         _binding = FragmentHighscoreBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -48,12 +49,12 @@ class  HighscoreFragment : Fragment() {
 
         override fun getView(position: Int, view: View?, viewGroup: ViewGroup?): View {
             val rootView = layoutInflater.inflate(R.layout.row_score, viewGroup, false)
-            val textviewTitle = rootView.findViewById<TextView>(R.id.Score)
-            val textViewDescription = rootView.findViewById<TextView>(R.id.Score)
+            val textviewId= rootView.findViewById<TextView>(R.id.Name)
+            val textViewScore = rootView.findViewById<TextView>(R.id.Score)
 
 
-            textviewTitle.text = scores[position].toString()
-            textviewTitle.text = positions[position].toString()
+            textviewId.text = (position+1).toString() + ": "
+            textViewScore.text = scores[position].toString() + " Points"
 
             return rootView
         }
