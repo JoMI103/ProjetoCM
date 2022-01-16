@@ -13,6 +13,7 @@ class Player {
     var y : Float
 
     var forca : Int = 0
+    var cooldown: Int = 0
 
     var boosting = false
 
@@ -33,7 +34,7 @@ class Player {
         //desenha o player
         bitmap = BitmapFactory.decodeResource(context.resources,R.drawable.playerf)
 
-        // posicoes de maximo e minimo no ecra.
+        // posicoes de maximo e minimo no ecra
         minY = 0F
         maxY = (screenHeight - bitmap.height * 2).toFloat()
         detectColosion = Rect(x.toInt(),y.toInt(),bitmap.width, bitmap.height)
@@ -41,11 +42,18 @@ class Player {
 
     fun update(){
 
-        if(forca>0){
-        forca /= 2
+        if(cooldown > 0)
+        {
+            cooldown--
         }
         else
-            forca=0
+        {
+            if(forca>0){
+                forca /= 2
+            }
+            else
+                forca=0
+        }
 
         y -= forca - GRAVITY
 

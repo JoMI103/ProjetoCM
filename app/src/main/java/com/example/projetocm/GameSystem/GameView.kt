@@ -98,10 +98,13 @@ class GameView: SurfaceView,Runnable {
             when (it.action.and(MotionEvent.ACTION_MASK)){
                 /*MotionEvent.ACTION_UP ->{
                     player.boosting = false
-                } /
+                }
                  */
                 MotionEvent.ACTION_DOWN ->{
-                    player.forca = 300
+                    if(player.cooldown == 0){
+                    player.forca = 70
+                    player.cooldown = 4
+                }
                 }
             }
         }
