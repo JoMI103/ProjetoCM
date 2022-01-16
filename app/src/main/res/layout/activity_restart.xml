@@ -8,58 +8,64 @@
 
     <Button
         android:id="@+id/buttonTryAgain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_width="192dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="180dp"
+        android:backgroundTint="#3A3A3A"
         android:text="Try Again"
-        app:layout_constraintBottom_toTopOf="@+id/ETName"
+        android:textColorHighlight="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHSSave" />
 
     <Button
         android:id="@+id/buttonBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="116dp"
+        android:layout_width="104dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="112dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTryAgain"
+        app:layout_constraintVertical_bias="0.157" />
 
     <TextView
         android:id="@+id/tvScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_marginTop="112dp"
         android:text="Score:"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonTryAgain"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/ETName"
         android:layout_width="232dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/buttonBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvScore" />
 
     <Button
         android:id="@+id/buttonHSSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_width="138dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
         android:text="Save Score"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonBack" />
+        app:layout_constraintTop_toBottomOf="@+id/ETName" />
 </androidx.constraintlayout.widget.ConstraintLayout>
