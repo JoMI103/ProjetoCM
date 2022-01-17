@@ -89,7 +89,7 @@ class  HighscoreFragment : Fragment() {
 
  */
       db.collection("Scores")
-          .orderBy("Score", Query.Direction.DESCENDING).limit(2)
+          .orderBy("Score", Query.Direction.DESCENDING).limit(10)
           .get()
           .addOnSuccessListener { documents ->
               for (document in documents) {
